@@ -14,6 +14,7 @@ namespace Mini_E_Commerce.Application.Abstracts
         Task<Result> SoftDeleteAsync(Guid userId,Guid productId);
         Task<Result<ResponseGetProductDto>> GetAsync(Guid productId);
         Task<Result<List<ResponseGetProductDto>>> GetAllAsync();
+        Task<Result<List<ResponseGetProductDto>>> GetSearchProductsAsync(string? search, Guid? categoryId, decimal? minPrice, decimal? maxPrice, int pageNumber, int pageSize);
     }
 }
     

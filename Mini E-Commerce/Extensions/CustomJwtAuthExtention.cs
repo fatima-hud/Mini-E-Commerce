@@ -41,7 +41,7 @@ namespace Mini_E_Commerce.Extensions
 
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "MarketExpress API",
+                    Title = "MiniECommerce API",
                     Version = "v1"
                 });
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()

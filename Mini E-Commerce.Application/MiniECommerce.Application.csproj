@@ -30,8 +30,4 @@
     <ProjectReference Include="..\Mini E-Commerce.Infrastructure\MiniECommerce.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dto\Order\Response\" />
-  </ItemGroup>
-
 </Project>

@@ -108,6 +108,21 @@ namespace Mini_E_Commerce.Application.Implementations
             return Result<ResponseGetProductDto>.Success(ret);
         }
 
+        public async Task<Result<List<ResponseGetProductDto>>> GetSearchProductsAsync(string? search, Guid? categoryId, decimal? minPrice, decimal? maxPrice, int pageNumber, int pageSize)
+        {
+            var products = await _productRepository.GetSearchProductsAsync(search, categoryId, minPrice, maxPrice, pageNumber, pageSize);
+            var ret = products.Select(e => new ResponseGetProductDto
+            {
+                ProductId = e.Id,
+                Name = e.Name,
+                Description = e.Description,
+                StockQuantity = e.StockQuantity,
+                CategoryId = e.CategoryId,
+                Price = e.Price
+            }).ToList();
+            return Result<List<ResponseGetProductDto>>.Success(ret);
+        }
+
         public async Task<Result> SoftDeleteAsync(Guid userId, Guid productId)
         {
             var user = await _userRepository.GetByIdAsync(userId);

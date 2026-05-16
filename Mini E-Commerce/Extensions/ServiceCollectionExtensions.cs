@@ -20,6 +20,9 @@ namespace Mini_E_Commerce.Extensions
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ICartItemRepository,CartItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
         }
+          
     }
 }

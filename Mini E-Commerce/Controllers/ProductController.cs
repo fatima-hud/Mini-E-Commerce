@@ -34,7 +34,7 @@ namespace Mini_E_Commerce.Controllers
             var res = await _productService.AddAsync(userId, request);
             if (!res.IsSuccess)
             {
-              return this.ToApiResult(res);
+                return this.ToApiResult(res);
             }
             return ApiResult<ResponseAddProductDto>.Created(res.Value);
         }
@@ -77,7 +77,7 @@ namespace Mini_E_Commerce.Controllers
                 var errors = string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
                 return ApiResult<ResponseGetProductDto>.BadRequest(errors);
             }
-            var res = await _productService.UpdateAsync(userId,productId,request);
+            var res = await _productService.UpdateAsync(userId, productId, request);
             if (!res.IsSuccess)
             {
                 return this.ToApiResult(res);
@@ -93,7 +93,7 @@ namespace Mini_E_Commerce.Controllers
                 var errors = string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
                 return ApiResult.BadRequest(errors);
             }
-            var res=await _productService.SoftDeleteAsync(userId, productId);
+            var res = await _productService.SoftDeleteAsync(userId, productId);
             if (!res.IsSuccess)
             {
                 return this.ToApiResult(res);
@@ -101,6 +101,23 @@ namespace Mini_E_Commerce.Controllers
             return ApiResult.Ok("Deleted Successfuly");
 
 
+        }
+
+
+        [HttpGet]
+        public async Task<ApiResult<List<ResponseGetProductDto>>> GetSearchProductsAsync(string? search, Guid? categoryId, decimal? minPrice, decimal? maxPrice, int pageNumber, int pageSize)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+                return ApiResult<List<ResponseGetProductDto>>.BadRequest(errors);
+            }
+            var res = await _productService.GetSearchProductsAsync(search, categoryId, minPrice, maxPrice, pageNumber, pageSize);
+            if (!res.IsSuccess)
+            {
+                return this.ToApiResult(res);
+            }
+            return ApiResult<List<ResponseGetProductDto>>.Ok(res.Value);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Mini_E_Commerce.Infrastructure.Configurations
         {
             builder.Property(e => e.UnitPrice).HasColumnType("decimal(8,2)");
             builder.ToTable(e => e.HasCheckConstraint("Ck_OrderItem_Quantity", "[Quantity] >0"));
-            builder.HasQueryFilter(e => !e.IsDeleted);
+        
         }
     }
 }

@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Mini_E_Commerce.Core.Models
 {
-    public class OrderItemModel:BaseEntity
+    public class OrderItemModel
     {
+        public Guid Id { get; set; }
         public Guid OrderId { get; set; }
         public Guid ProductId { get; set; }
         public int Quantity { get; set; }

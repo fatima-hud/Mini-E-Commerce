@@ -38,7 +38,7 @@ namespace Mini_E_Commerce.Controllers
             return ApiResult.Created(res.Message);
         }
         [HttpGet]
-        public async Task<ApiResult<List<ResponseGetCartDto>>> GetAsync(Guid userId)
+        public async Task<ApiResult<List<ResponseGetCartDto>>> GetAllCartItemsAsync(Guid userId)
         {
 
             if (!ModelState.IsValid)
