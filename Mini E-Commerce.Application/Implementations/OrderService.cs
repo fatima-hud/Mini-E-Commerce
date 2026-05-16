@@ -169,7 +169,7 @@ namespace Mini_E_Commerce.Application.Implementations
             }
             if (admin.Role != "Admin")
             {
-                return Result<List<ResponseGetOrderDto>>.BadRequest("You don't allow to update order status");
+                return Result<List<ResponseGetOrderDto>>.BadRequest("You don't allow to search ");
             }
             var orders = await _orderRepository.GetSearchOrdersAsync(customerId, status, fromDate, endDate);
             var ret = new List<ResponseGetOrderDto>();

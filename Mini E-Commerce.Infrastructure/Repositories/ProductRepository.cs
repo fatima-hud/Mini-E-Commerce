@@ -17,25 +17,25 @@ namespace Mini_E_Commerce.Infrastructure.Repositories
 
         public async Task<List<ProductModel>> GetSearchProductsAsync(string? search, Guid? categoryId, decimal? minPrice, decimal? maxPrice, int pageNumber, int pageSize)
         {
-            var products=await _dbContext.Products.ToListAsync();
+            var products =  _dbContext.Products.AsQueryable();
             if (!string.IsNullOrEmpty(search))
             {
-                products=products.Where(p => p.Name.Contains(search) || p.Description.Contains(search)).ToList();
+                products=products.Where(p => p.Name.Contains(search) || p.Description.Contains(search));
             }
-            if (categoryId != null)
+            if (categoryId.HasValue)
             {
-                products=products.Where(p => p.CategoryId == categoryId).ToList();
+                products=products.Where(p => p.CategoryId == categoryId);
             }
-            if (minPrice != null)
+            if (minPrice.HasValue)
             {
-                products=products.Where(p => p.Price >= minPrice).ToList();
+                products=products.Where(p => p.Price >= minPrice);
             }
-            if (maxPrice != null)
+            if (maxPrice.HasValue)
             {
-                products=products.Where(p => p.Price <= maxPrice).ToList();
+                products=products.Where(p => p.Price <= maxPrice);
             }
-            products=products.Skip(pageNumber*(pageSize-1)).Take(pageSize).ToList();
-            return products;
+            products=products.Skip(pageSize*(pageNumber-1)).Take(pageSize);
+            return await products.ToListAsync();
            
            
         }
