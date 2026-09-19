@@ -1,15 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Configurations;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Configurations;
 
-namespace Mini_E_Commerce.Infrastructure.Context
+namespace MiniECommerce.Infrastructure.Context
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
-       public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
@@ -25,6 +22,6 @@ namespace Mini_E_Commerce.Infrastructure.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly);
-        }           
+        }
     }
 }

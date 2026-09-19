@@ -1,14 +1,14 @@
-﻿using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Dto.Order.Response;
-using Mini_E_Commerce.Core.Enums;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
+﻿using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Dto.Order.Response;
+using MiniECommerce.Core.Enums;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
 using MiniECommerce.Core.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Implementations
+namespace MiniECommerce.Application.Implementations
 {
     public class OrderService : IOrderService
     {

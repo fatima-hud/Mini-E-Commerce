@@ -1,16 +1,11 @@
-﻿using Azure.Core;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Dto.Product.Request;
-using Mini_E_Commerce.Application.Dto.Product.Response;
-using Mini_E_Commerce.Bases;
-using Mini_E_Commerce.Extensions;
-using MiniECommerce.Core.Results;
+﻿using Microsoft.AspNetCore.Mvc;
+using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Dto.Product.Request;
+using MiniECommerce.Application.Dto.Product.Response;
+using MiniECommerce.Bases;
+using MiniECommerce.Extensions;
 
-namespace Mini_E_Commerce.Controllers
+namespace MiniECommerce.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

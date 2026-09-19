@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Dto.Order.Response
+namespace MiniECommerce.Application.Dto.Order.Response
 {
     public class ResponseGetOrderDetailsDto
     {

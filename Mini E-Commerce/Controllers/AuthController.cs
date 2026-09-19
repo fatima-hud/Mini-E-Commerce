@@ -1,15 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Mini_E_Commerce.Bases;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Mini_E_Commerce.Controllers
+
+namespace MiniECommerce.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
-
-        
 
     }
 }

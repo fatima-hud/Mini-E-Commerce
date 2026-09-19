@@ -1,16 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
-using Mini_E_Commerce.Infrastructure.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Context;
 
-namespace Mini_E_Commerce.Infrastructure.SeedDate
+namespace MiniECommerce.Infrastructure.SeedDate
 {
     public static class DataSeeder
     {
-     
+
 
         public static async Task SeedDataAsync(ApplicationDbContext dbContext)
         {
@@ -34,12 +29,12 @@ namespace Mini_E_Commerce.Infrastructure.SeedDate
                 new CategoryModel { Id = Guid.NewGuid(), Name = "Books" },
                 new CategoryModel { Id = Guid.NewGuid(), Name = "Clothing" },
             };
-            await dbContext.Categories.AddRangeAsync(categories);
+                await dbContext.Categories.AddRangeAsync(categories);
                 await dbContext.SaveChangesAsync();
             }
             if (!dbContext.Products.Any())
             {
-                var products= new List<ProductModel>
+                var products = new List<ProductModel>
                 {
                     new ProductModel { Id = Guid.NewGuid(),Name="Smartphone",Description="Latest model smartphone",StockQuantity=50,Price=500m,CategoryId=dbContext.Categories.FirstOrDefault(c=>c.Name=="Electronics").Id },
                     new ProductModel { Id = Guid.NewGuid(),Name="Laptop",Description="High-performance laptop",StockQuantity=30,Price=1000m,CategoryId=dbContext.Categories.FirstOrDefault(c=>c.Name=="Electronics").Id },
@@ -49,7 +44,7 @@ namespace Mini_E_Commerce.Infrastructure.SeedDate
                 await dbContext.Products.AddRangeAsync(products);
                 await dbContext.SaveChangesAsync();
             }
-           
+
 
 
 

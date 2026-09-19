@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Identity;
-using Mini_E_Commerce.Extensions;
-using Mini_E_Commerce.Infrastructure.Context;
-using Mini_E_Commerce.Infrastructure.Extensions;
-using Mini_E_Commerce.Infrastructure.SeedDate;
+using MiniECommerce.Extensions;
+using MiniECommerce.Infrastructure.Context;
+using MiniECommerce.Infrastructure.Extensions;
+using MiniECommerce.Infrastructure.SeedDate;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddCustomJwtAuth(builder.Configuration);
 builder.Services.AddSwaggerGenJwtAuth();
@@ -34,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

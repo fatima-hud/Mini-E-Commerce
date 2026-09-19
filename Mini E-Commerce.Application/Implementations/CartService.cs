@@ -1,15 +1,15 @@
-﻿using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Dto.Cart.Request;
-using Mini_E_Commerce.Application.Dto.Cart.Response;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
+﻿using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Dto.Cart.Request;
+using MiniECommerce.Application.Dto.Cart.Response;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
 using MiniECommerce.Core.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Implementations
+namespace MiniECommerce.Application.Implementations
 {
     public class CartService : ICartService
     {

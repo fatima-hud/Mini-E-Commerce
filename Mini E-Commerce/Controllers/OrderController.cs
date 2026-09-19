@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Dto.Order.Response;
-using Mini_E_Commerce.Bases;
-using Mini_E_Commerce.Core.Enums;
-using Mini_E_Commerce.Extensions;
-using MiniECommerce.Application.Dto.Category.Response;
+﻿using Microsoft.AspNetCore.Mvc;
+using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Dto.Order.Response;
+using MiniECommerce.Bases;
+using MiniECommerce.Core.Enums;
+using MiniECommerce.Extensions;
 
-namespace Mini_E_Commerce.Controllers
+namespace MiniECommerce.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -46,7 +44,8 @@ namespace Mini_E_Commerce.Controllers
                 return ApiResult<List<ResponseGetOrderDto>>.BadRequest(errors);
             }
             var res = await _orderService.GetAllOrdersAsync(userId);
-            if (!res.IsSuccess) {
+            if (!res.IsSuccess)
+            {
                 return this.ToApiResult(res);
             }
             return ApiResult<List<ResponseGetOrderDto>>.Ok(res.Value);
@@ -68,7 +67,8 @@ namespace Mini_E_Commerce.Controllers
             return ApiResult<List<ResponseGetOrderDetailsDto>>.Ok(res.Value);
         }
         [HttpGet]
-        public async Task<ApiResult<List<ResponseGetOrderDto>>> GetSearchOrders(Guid adminId, Guid? customerId, OrderStatus? status, DateTime? fromDate, DateTime? endDate) {
+        public async Task<ApiResult<List<ResponseGetOrderDto>>> GetSearchOrders(Guid adminId, Guid? customerId, OrderStatus? status, DateTime? fromDate, DateTime? endDate)
+        {
             if (!ModelState.IsValid)
             {
                 var errors = string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));

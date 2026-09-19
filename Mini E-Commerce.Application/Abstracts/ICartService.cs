@@ -1,11 +1,11 @@
-﻿using Mini_E_Commerce.Application.Dto.Cart.Request;
-using Mini_E_Commerce.Application.Dto.Cart.Response;
+﻿using MiniECommerce.Application.Dto.Cart.Request;
+using MiniECommerce.Application.Dto.Cart.Response;
 using MiniECommerce.Core.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Abstracts
+namespace MiniECommerce.Application.Abstracts
 {
     public interface ICartService
     {

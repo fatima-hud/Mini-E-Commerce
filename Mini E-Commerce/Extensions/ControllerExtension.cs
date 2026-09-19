@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mini_E_Commerce.Bases;
+using MiniECommerce.Bases;
 using MiniECommerce.Core.Results;
 
-namespace Mini_E_Commerce.Extensions
+namespace MiniECommerce.Extensions
 {
     public static class ControllerExtensions
     {

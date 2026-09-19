@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Dto.Cart.Request
+namespace MiniECommerce.Application.Dto.Cart.Request
 {
     public class RequestUpdateCartDto
     {

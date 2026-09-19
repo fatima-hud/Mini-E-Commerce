@@ -1,11 +1,11 @@
-﻿using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Implementations;
-using Mini_E_Commerce.Infrastructure.Abstracts;
-using Mini_E_Commerce.Infrastructure.Repositories;
+﻿using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Implementations;
+using MiniECommerce.Infrastructure.Abstracts;
+using MiniECommerce.Infrastructure.Repositories;
 using MiniECommerce.Application.Abstracts;
 using MiniECommerce.Application.Implementations;
 
-namespace Mini_E_Commerce.Extensions
+namespace MiniECommerce.Extensions
 {
     public static class ServiceCollectionExtensions
     {

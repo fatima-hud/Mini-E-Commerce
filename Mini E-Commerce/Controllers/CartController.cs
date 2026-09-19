@@ -1,16 +1,11 @@
-﻿using Azure.Core;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Mini_E_Commerce.Application.Abstracts;
-using Mini_E_Commerce.Application.Dto.Cart.Request;
-using Mini_E_Commerce.Application.Dto.Cart.Response;
-using Mini_E_Commerce.Bases;
-using Mini_E_Commerce.Extensions;
-using MiniECommerce.Application.Dto.Category.Response;
-using MiniECommerce.Core.Results;
-using System.Reflection.Metadata.Ecma335;
+﻿using Microsoft.AspNetCore.Mvc;
+using MiniECommerce.Application.Abstracts;
+using MiniECommerce.Application.Dto.Cart.Request;
+using MiniECommerce.Application.Dto.Cart.Response;
+using MiniECommerce.Bases;
+using MiniECommerce.Extensions;
 
-namespace Mini_E_Commerce.Controllers
+namespace MiniECommerce.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -85,7 +80,7 @@ namespace Mini_E_Commerce.Controllers
 
 
         }
-      
+
 
     }
 }

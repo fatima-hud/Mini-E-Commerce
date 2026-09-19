@@ -1,9 +1,9 @@
-﻿using Mini_E_Commerce.Core.Models;
+﻿using MiniECommerce.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Dto.Product.Response
+namespace MiniECommerce.Application.Dto.Product.Response
 {
     public class ResponseGetProductDto
     {

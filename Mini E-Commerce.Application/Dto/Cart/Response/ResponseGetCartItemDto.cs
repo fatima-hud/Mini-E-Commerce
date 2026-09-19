@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Dto.Cart.Response
+namespace MiniECommerce.Application.Dto.Cart.Response
 {
     public class ResponseGetCartItemDto
     {

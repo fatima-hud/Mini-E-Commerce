@@ -1,12 +1,9 @@
-﻿using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
-using Mini_E_Commerce.Infrastructure.Context;
+﻿using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
+using MiniECommerce.Infrastructure.Context;
 using MiniECommerce.Infrastructure.InfrastructureBases;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Mini_E_Commerce.Infrastructure.Repositories
+namespace MiniECommerce.Infrastructure.Repositories
 {
     public class UserRepository : GenericRepositoryAsync<UserModel>, IUserRepository
     {

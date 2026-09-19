@@ -1,13 +1,10 @@
-﻿using Mini_E_Commerce.Core.Models;
+﻿using MiniECommerce.Core.Models;
 using MiniECommerce.Infrastructure.InfrastructureBases;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Mini_E_Commerce.Infrastructure.Abstracts
+namespace MiniECommerce.Infrastructure.Abstracts
 {
-   public interface ICategoryRepository:IGenericRepositoryAsync<CategoryModel>
+    public interface ICategoryRepository : IGenericRepositoryAsync<CategoryModel>
     {
-        Task<bool>IsNameExistAsync(string name);
+        Task<bool> IsNameExistAsync(string name);
     }
 }

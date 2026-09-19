@@ -1,12 +1,12 @@
-﻿using Mini_E_Commerce.Application.Dto.Order.Request;
-using Mini_E_Commerce.Application.Dto.Order.Response;
-using Mini_E_Commerce.Core.Enums;
+﻿using MiniECommerce.Application.Dto.Order.Request;
+using MiniECommerce.Application.Dto.Order.Response;
+using MiniECommerce.Core.Enums;
 using MiniECommerce.Core.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Abstracts
+namespace MiniECommerce .Application.Abstracts
 {
     public interface IOrderService
     {

@@ -1,11 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Mini_E_Commerce.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MiniECommerce.Core.Models;
 
-namespace Mini_E_Commerce.Infrastructure.Configurations
+
+namespace MiniECommerce.Infrastructure.Configurations
 {
     public class CartConfiguration : IEntityTypeConfiguration<CartModel>
     {

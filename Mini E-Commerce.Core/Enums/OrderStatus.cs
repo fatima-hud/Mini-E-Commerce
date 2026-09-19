@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Mini_E_Commerce.Core.Enums
+﻿
+namespace MiniECommerce.Core.Enums
 {
     public enum OrderStatus
     {

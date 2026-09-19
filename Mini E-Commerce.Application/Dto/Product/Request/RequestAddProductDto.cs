@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Dto.Product.Request
+namespace MiniECommerce.Application.Dto.Product.Request
 {
     public class RequestAddProductDto
     {

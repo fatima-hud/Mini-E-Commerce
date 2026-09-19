@@ -1,6 +1,6 @@
 ﻿using Azure.Core;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
 using MiniECommerce.Application.Abstracts;
 using MiniECommerce.Application.Dto.Category.Request;
 using MiniECommerce.Application.Dto.Category.Response;

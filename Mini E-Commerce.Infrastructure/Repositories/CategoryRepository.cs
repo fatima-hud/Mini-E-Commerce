@@ -1,14 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
-using Mini_E_Commerce.Infrastructure.Context;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
+using MiniECommerce.Infrastructure.Context;
 using MiniECommerce.Infrastructure.InfrastructureBases;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Mini_E_Commerce.Infrastructure.Repositories
+namespace MiniECommerce.Infrastructure.Repositories
 {
     public class CategoryRepository : GenericRepositoryAsync<CategoryModel>, ICategoryRepository
     {
@@ -18,7 +14,7 @@ namespace Mini_E_Commerce.Infrastructure.Repositories
 
         public async Task<bool> IsNameExistAsync(string name)
         {
-            var res=await _dbContext.Categories.AnyAsync(e=>e.Name==name &&!e.IsDeleted);
+            var res = await _dbContext.Categories.AnyAsync(e => e.Name == name && !e.IsDeleted);
             return res;
 
         }

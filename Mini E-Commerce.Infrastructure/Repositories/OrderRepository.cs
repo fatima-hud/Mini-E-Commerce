@@ -1,15 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Mini_E_Commerce.Core.Enums;
-using Mini_E_Commerce.Core.Models;
-using Mini_E_Commerce.Infrastructure.Abstracts;
-using Mini_E_Commerce.Infrastructure.Context;
-using MiniECommerce.Core.Results;
+using MiniECommerce.Core.Enums;
+using MiniECommerce.Core.Models;
+using MiniECommerce.Infrastructure.Abstracts;
+using MiniECommerce.Infrastructure.Context;
 using MiniECommerce.Infrastructure.InfrastructureBases;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Mini_E_Commerce.Infrastructure.Repositories
+namespace MiniECommerce.Infrastructure.Repositories
 {
     public class OrderRepository : GenericRepositoryAsync<OrderModel>, IOrderRepository
     {
@@ -19,13 +15,13 @@ namespace Mini_E_Commerce.Infrastructure.Repositories
 
         public async Task<List<OrderModel>> GetAllByUserAsync(Guid userId)
         {
-           var res=await _dbContext.Orders.Where(o => o.CustomerId == userId).ToListAsync();
+            var res = await _dbContext.Orders.Where(o => o.CustomerId == userId).ToListAsync();
             return res;
         }
 
-        public async Task<List<OrderModel>>GetSearchOrdersAsync( Guid? customerId, OrderStatus? status, DateTime? fromDate, DateTime? endDate)
+        public async Task<List<OrderModel>> GetSearchOrdersAsync(Guid? customerId, OrderStatus? status, DateTime? fromDate, DateTime? endDate)
         {
-           var orders= await _dbContext.Orders.ToListAsync();
+            var orders = await _dbContext.Orders.ToListAsync();
 
             if (customerId.HasValue)
             {
@@ -50,6 +46,6 @@ namespace Mini_E_Commerce.Infrastructure.Repositories
             return orders;
         }
 
-      
+
     }
 }

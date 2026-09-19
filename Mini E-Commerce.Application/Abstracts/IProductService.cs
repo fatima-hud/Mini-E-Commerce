@@ -1,11 +1,11 @@
-﻿using Mini_E_Commerce.Application.Dto.Product.Request;
-using Mini_E_Commerce.Application.Dto.Product.Response;
+﻿using MiniECommerce.Application.Dto.Product.Request;
+using MiniECommerce.Application.Dto.Product.Response;
 using MiniECommerce.Core.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mini_E_Commerce.Application.Abstracts
+namespace MiniECommerce.Application.Abstracts
 {
     public interface IProductService
     {

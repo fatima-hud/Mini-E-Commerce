@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace Mini_E_Commerce.Core.Helper
+namespace MiniECommerce.Core.Helper
 {
    public class EmailSettings
     {

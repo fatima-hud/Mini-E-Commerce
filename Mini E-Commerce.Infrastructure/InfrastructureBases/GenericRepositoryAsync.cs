@@ -1,7 +1,8 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using Mini_E_Commerce.Infrastructure.Context;
+using MiniECommerce.Infrastructure.Context;
+
 
 
 namespace MiniECommerce.Infrastructure.InfrastructureBases

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Mini_E_Commerce.Bases
+namespace MiniECommerce.Bases
 {
     public class ApiResponse<T>
     {

@@ -1,9 +1,7 @@
-﻿using Mini_E_Commerce.Core.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using MiniECommerce.Core.Enums;
 
-namespace Mini_E_Commerce.Core.Models
+namespace MiniECommerce.Core.Models
 {
     public class OrderModel:BaseEntity
     {

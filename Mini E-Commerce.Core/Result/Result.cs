@@ -1,6 +1,4 @@
-﻿using MiniECommerce.Core.Results;
-
-namespace MiniECommerce.Core.Results
+﻿namespace MiniECommerce.Core.Results
 {
 
     public class Result<T>

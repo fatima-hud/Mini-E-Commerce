@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Mini_E_Commerce.Bases
+namespace MiniECommerce.Bases
 {
     public class ApiResult<T> : IActionResult
     {
